@@ -31,5 +31,39 @@ namespace ShopsRUs.IdentityServer.Controllers
             var entity = await _appUserService.AddAsync(_mapper.Map<AppUser>(appUserAddDto));
             return Created("", entity);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var entities = await _appUserService.GetAllAsync();
+            return Ok(entities);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(Guid Id)
+        {
+            var appUser = await _appUserService.GetByUUIdAsync(Id);
+            return Ok(appUser);
+        }
+
+        [HttpPut]
+        [ValidModel]
+        public async Task<IActionResult> Update(AppUserUpdateDto appUserUpdateDto)
+        {
+            var currentAppUser = await _appUserService.GetByUUIdAsync(appUserUpdateDto.Id);
+            if (currentAppUser == null)
+            {
+                return BadRequest();
+            }
+            await _appUserService.UpdateAsync(_mapper.Map<AppUser>(appUserUpdateDto));
+            return Created("", appUserUpdateDto);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid Id)
+        {
+            await _appUserService.RemoveAsync(new AppUser() { Id = Id });
+            return NoContent();
+        }
     }
 }
