@@ -1,3 +1,5 @@
+using AutoMapper;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -7,6 +9,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using ShopsRUs.IdentityServer.Mapping.AutoMapper;
+using ShopsRUs.IdentityServer.Settings.Interfaces;
+using ShopsRUs.IdentityServer.Settings.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +32,28 @@ namespace ShopsRUs.IdentityServer
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers();
+            services.AddControllers().AddFluentValidation();
+
+            services.AddScoped(typeof(IGenericService<>), typeof(GenericManager<>));
+            services.AddScoped(typeof(IGenericDal<>), typeof(EfGenericRepository<>));
+
+            services.AddScoped<IAppUserDal, EfAppUserRepository>();
+            services.AddScoped<IAppUserService, AppUserManager>();
+
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MapProfile());
+            });
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
+
+
+            services.AddCors(options => options.AddDefaultPolicy(policy =>
+                            policy.AllowAnyMethod()
+                                    .AllowAnyHeader()
+                                    .AllowCredentials()
+                        ));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ShopsRUs.IdentityServer", Version = "v1" });
@@ -47,6 +73,7 @@ namespace ShopsRUs.IdentityServer
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors();
 
             app.UseAuthorization();
 
