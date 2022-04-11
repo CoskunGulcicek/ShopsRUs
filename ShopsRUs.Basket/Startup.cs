@@ -6,7 +6,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
+using ShopsRUs.Basket.Services;
+using ShopsRUs.Basket.Settings;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +29,15 @@ namespace ShopsRUs.Basket
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddScoped<IBasketService, BasketService>();
+            services.Configure<RedisSettings>(Configuration.GetSection("RedisSettings"));
+            services.AddSingleton<RedisService>(sp=> 
+            {
+                var redisSettings = sp.GetRequiredService<IOptions<RedisSettings>>().Value;
+                var redis = new RedisService(redisSettings.Host, redisSettings.Port);
+                redis.Connect();
+                return redis;
+            });
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
