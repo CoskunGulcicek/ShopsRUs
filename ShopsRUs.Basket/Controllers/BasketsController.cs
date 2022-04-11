@@ -21,7 +21,7 @@ namespace ShopsRUs.Basket.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetBasket(Guid userId)
+        public async Task<IActionResult> GetBasket(int userId)
         {
             var basket = await _basketService.GetBasket(userId);
             return Created("", basket);
@@ -35,7 +35,7 @@ namespace ShopsRUs.Basket.Controllers
         }
 
         [HttpDelete]
-        public async Task<IActionResult> DeleteBasket(Guid userId)
+        public async Task<IActionResult> DeleteBasket(int userId)
         {
             await _basketService.Delete(userId);
             return NoContent();

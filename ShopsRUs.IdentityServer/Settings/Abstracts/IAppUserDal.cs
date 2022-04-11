@@ -9,6 +9,6 @@ namespace ShopsRUs.IdentityServer.Settings.Interfaces
     public interface IAppUserDal
     {
         Task<List<AppUserGetDto>> GetContactsListAsync();
-        Task<AppUserGetDto> GetContactByIdAsync(Guid uuid);
+        Task<AppUserGetDto> GetContactByIdAsync(int id);
     }
 }

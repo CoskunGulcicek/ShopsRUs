@@ -8,8 +8,8 @@ namespace ShopsRUs.Basket.Services
 {
     public interface IBasketService
     {
-        Task<BasketDto> GetBasket(Guid UserId);
+        Task<BasketDto> GetBasket(int UserId);
         Task<bool> SaveOrUpdate(BasketDto basketDto);
-        Task<bool> Delete(Guid UserId);
+        Task<bool> Delete(int UserId);
     }
 }

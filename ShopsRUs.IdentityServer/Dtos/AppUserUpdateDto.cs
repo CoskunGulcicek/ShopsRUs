@@ -7,7 +7,7 @@ namespace ShopsRUs.IdentityServer.Dtos
 {
     public class AppUserUpdateDto
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public string SurName { get; set; }
         public bool IsEmployee { get; set; }

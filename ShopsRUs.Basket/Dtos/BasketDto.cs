@@ -7,7 +7,7 @@ namespace ShopsRUs.Basket.Dtos
 {
     public class BasketDto
     {
-        public Guid UserId { get; set; }
+        public int UserId { get; set; }
         public List<BasketItemDto> basketItems { get; set; }
         public decimal TotalPrice
         {

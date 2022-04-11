@@ -15,15 +15,15 @@ namespace ShopsRUs.Basket.Services
             _redisService = redisService;
         }
 
-        public async Task<bool> Delete(Guid UserId)
+        public async Task<bool> Delete(int UserId)
         {
-            var status = await _redisService.GetDb().KeyDeleteAsync(UserId);
+            var status = await _redisService.GetDb().KeyDeleteAsync(UserId.ToString());
             return status;
         }
 
-        public async Task<BasketDto> GetBasket(Guid UserId)
+        public async Task<BasketDto> GetBasket(int UserId)
         {
-            var existBasket = await _redisService.GetDb().StringGetAsync(UserId);
+            var existBasket = await _redisService.GetDb().StringGetAsync(UserId.ToString());
             if (!String.IsNullOrEmpty(existBasket))
             {
                 return JsonSerializer.Deserialize<BasketDto>(existBasket);

@@ -13,6 +13,7 @@ namespace ShopsRUs.IdentityServer.Settings.Mapping
         public void Configure(EntityTypeBuilder<AppUser> builder)
         {
             builder.HasKey(x => x.Id);
+            builder.Property(x => x.Id).UseIdentityColumn();
 
             builder.Property(x => x.Name).HasMaxLength(30).IsRequired();
 

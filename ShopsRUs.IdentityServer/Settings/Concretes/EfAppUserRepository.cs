@@ -19,10 +19,10 @@ namespace ShopsRUs.IdentityServer.Settings.Repositories
             _mapper = mapper;
         }
 
-        public async Task<AppUserGetDto> GetContactByIdAsync(Guid uuid)
+        public async Task<AppUserGetDto> GetContactByIdAsync(int id)
         {
             using var context = new ShopsRUsContext();
-            return await (Task<AppUserGetDto>)context.AppUsers.Where(x => x.Id == uuid).Select(x => new AppUserGetDto()
+            return await (Task<AppUserGetDto>)context.AppUsers.Where(x => x.Id == id).Select(x => new AppUserGetDto()
             {
                 Id = x.Id,
                 Name = x.Name,

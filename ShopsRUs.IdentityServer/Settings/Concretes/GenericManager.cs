@@ -29,10 +29,6 @@ namespace ShopsRUs.IdentityServer.Settings.Repositories
             return await _genericDal.GetByIdAsync(id);
         }
 
-        public async Task<TEntity> GetByUUIdAsync(Guid id)
-        {
-            return await _genericDal.GetByUUIdAsync(id);
-        }
 
         public async Task RemoveAsync(TEntity entity)
         {

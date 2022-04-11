@@ -1,3 +1,7 @@
 Identity 5010
-Basket 5011
-Discount 5012
+Basket 5015
+Discount 5014
+
+identity lokalde
+shopsrus_basketdb redis 6379
+shopsrus_discountdb postresql 27017

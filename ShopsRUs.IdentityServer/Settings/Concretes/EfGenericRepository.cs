@@ -74,10 +74,5 @@ namespace ShopsRUs.IdentityServer.Settings.Repositories
             return await context.Set<TEntity>().FirstOrDefaultAsync(filter);
         }
 
-        public async Task<TEntity> GetByUUIdAsync(Guid id)
-        {
-            using var context = new ShopsRUsContext();
-            return await context.FindAsync<TEntity>(id);
-        }
     }
 }

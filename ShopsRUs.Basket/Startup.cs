@@ -39,6 +39,13 @@ namespace ShopsRUs.Basket
                 return redis;
             });
             services.AddControllers();
+
+            services.AddCors(options => options.AddDefaultPolicy(policy =>
+                            policy.AllowAnyMethod()
+                                    .AllowAnyHeader()
+                                    .AllowCredentials()
+                        ));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ShopsRUs.Basket", Version = "v1" });
@@ -58,6 +65,7 @@ namespace ShopsRUs.Basket
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors();
 
             app.UseAuthorization();
 

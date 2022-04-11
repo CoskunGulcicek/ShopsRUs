@@ -40,9 +40,9 @@ namespace ShopsRUs.IdentityServer.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(Guid Id)
+        public async Task<IActionResult> GetById(int Id)
         {
-            var appUser = await _appUserService.GetByUUIdAsync(Id);
+            var appUser = await _appUserService.GetByIdAsync(Id);
             return Ok(appUser);
         }
 
@@ -50,7 +50,7 @@ namespace ShopsRUs.IdentityServer.Controllers
         [ValidModel]
         public async Task<IActionResult> Update(AppUserUpdateDto appUserUpdateDto)
         {
-            var currentAppUser = await _appUserService.GetByUUIdAsync(appUserUpdateDto.Id);
+            var currentAppUser = await _appUserService.GetByIdAsync(appUserUpdateDto.Id);
             if (currentAppUser == null)
             {
                 return BadRequest();
@@ -60,7 +60,7 @@ namespace ShopsRUs.IdentityServer.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(Guid Id)
+        public async Task<IActionResult> Delete(int Id)
         {
             await _appUserService.RemoveAsync(new AppUser() { Id = Id });
             return NoContent();
