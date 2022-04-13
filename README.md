@@ -22,13 +22,13 @@ Mevcut yapıda yapılan discountu kayıt işlemi ödeme sonrası kayıt edilebil
 
 https://localhost:5015/api/Baskets linkine aşağıdaki yapı ile post isteği atabilirsiniz. size indirim microservisi ile iletişime geçip sonucu döndürecektir.(user oluşturmanıza gerek yok random bir id ile istek atabilirsiniz.)
 {
-    "UserId" :1,
-    "AppUser" : {
-        "Name" : "Aslı",
-        "SurName" : "Gorüken",
-        "IsEmployee" : true,
-        "IsMember" : false,
-        "MemberRegistrationTime": "2019-04-13T14:26:22.713655+03:00"
+    "UserId" :1,<br />
+    "AppUser" : {<br />
+        "Name" : "Aslı",<br />
+        "SurName" : "Gorüken",<br />
+        "IsEmployee" : true,<br />
+        "IsMember" : false,<br />
+        "MemberRegistrationTime": "2019-04-13T14:26:22.713655+03:00"<br />
     },
     "basketItems": [
     {
