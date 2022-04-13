@@ -25,4 +25,5 @@ https://localhost:5015/api/Baskets linkine aşağıdaki yapı ile post isteği a
 
 ![jsondata](https://user-images.githubusercontent.com/63802797/163184148-44c23fa2-5b9f-46c7-b62b-bd9476dff518.png)<br />
 
-json dataya txt dosyasını indirerek ulaşabilirsiniz. [jsondata.txt](https://github.com/CoskunGulcicek/ShopsRUs/files/8481515/jsondata.txt)<br />
+json dataya txt dosyasını indirerek ulaşabilirsiniz. [jsondata.txt](https://github.com/CoskunGulcicek/ShopsRUs/files/8481556/jsondata.txt) <br />
+
