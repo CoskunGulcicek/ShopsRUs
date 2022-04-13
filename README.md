@@ -21,30 +21,7 @@ Diğer Detaylar;
 Mevcut yapıda yapılan discountu kayıt işlemi ödeme sonrası kayıt edilebilir ama çeşitlilik ve sistemin çalışır durumunun görüntülenebilmesi için yapılan indirimler de kayıt altına alınıyor.
 
 https://localhost:5015/api/Baskets linkine aşağıdaki yapı ile post isteği atabilirsiniz. size indirim microservisi ile iletişime geçip sonucu döndürecektir.(user oluşturmanıza gerek yok random bir id ile istek atabilirsiniz.)
-{
-    "UserId" :1,
-    "AppUser" : {
-        "Name" : "Aslı",
-        "SurName" : "Gorüken",
-        "IsEmployee" : true,
-        "IsMember" : false,
-        "MemberRegistrationTime": "2019-04-13T14:26:22.713655+03:00"
-    },
-    "basketItems": [
-    {
-      "productName": "Elma",
-      "quantity": 5,
-      "price": 100
-    },
-    {
-      "productName": "Armut",
-      "quantity": 4,
-      "price": 100
-    },
-    {
-      "productName": "İphone13",
-      "quantity": 1,
-      "price": 100
-    }
-  ]
-}
+
+
+![jsondata](https://user-images.githubusercontent.com/63802797/163183260-3150af5d-3b96-4593-98cb-59141df3d60b.png)
+[jsondata.txt](https://github.com/CoskunGulcicek/ShopsRUs/files/8481515/jsondata.txt)
