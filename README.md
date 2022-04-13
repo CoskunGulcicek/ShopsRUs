@@ -23,5 +23,6 @@ Bir UI yazmayı planlamıştım identity microservisini bu yüzden kaldırmışt
 https://localhost:5015/api/Baskets linkine aşağıdaki yapı ile post isteği atabilirsiniz. size indirim microservisi ile iletişime geçip sonucu döndürecektir.(user oluşturmanıza gerek yok random bir id ile istek atabilirsiniz.)<br />
 
 
-![jsondata](https://user-images.githubusercontent.com/63802797/163183260-3150af5d-3b96-4593-98cb-59141df3d60b.png)<br />
+![jsondata](https://user-images.githubusercontent.com/63802797/163184148-44c23fa2-5b9f-46c7-b62b-bd9476dff518.png)<br />
+
 json dataya txt dosyasını indirerek ulaşabilirsiniz. [jsondata.txt](https://github.com/CoskunGulcicek/ShopsRUs/files/8481515/jsondata.txt)<br />
