@@ -11,16 +11,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{C8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityServer", "{E1995E1C-DE7F-4A00-9A7E-D5895BABDC3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopsRUs.IdentityServer", "ShopsRUs.IdentityServer\ShopsRUs.IdentityServer.csproj", "{AC39AC93-2091-490F-8AAC-B7119CEF17A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopsRUs.IdentityServer", "ShopsRUs.IdentityServer\ShopsRUs.IdentityServer.csproj", "{AC39AC93-2091-490F-8AAC-B7119CEF17A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopsRUs.Discount", "ShopsRUs.Discount\ShopsRUs.Discount.csproj", "{2F6DE1A4-3B06-4A6D-AF6E-9CC35CA799EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopsRUs.Discount", "ShopsRUs.Discount\ShopsRUs.Discount.csproj", "{2F6DE1A4-3B06-4A6D-AF6E-9CC35CA799EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopsRUs.Basket", "ShopsRUs.Basket\ShopsRUs.Basket.csproj", "{EC1A6F39-034E-48C6-9941-90E8C4C2B581}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopsRUs.Basket", "ShopsRUs.Basket\ShopsRUs.Basket.csproj", "{EC1A6F39-034E-48C6-9941-90E8C4C2B581}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E63282AD-DEF4-4295-9A49-C306A287527C}"
 	ProjectSection(SolutionItems) = preProject
 		Ports.txt = Ports.txt
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{3939EFCB-6AE7-4BA4-A468-F330C046DF4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopsRUs.Shared", "ShopsRUs.Shared\ShopsRUs.Shared.csproj", "{4DEDB454-314B-4498-B485-980323D256B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,6 +44,10 @@ Global
 		{EC1A6F39-034E-48C6-9941-90E8C4C2B581}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC1A6F39-034E-48C6-9941-90E8C4C2B581}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC1A6F39-034E-48C6-9941-90E8C4C2B581}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DEDB454-314B-4498-B485-980323D256B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DEDB454-314B-4498-B485-980323D256B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DEDB454-314B-4498-B485-980323D256B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DEDB454-314B-4498-B485-980323D256B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +59,8 @@ Global
 		{AC39AC93-2091-490F-8AAC-B7119CEF17A0} = {E1995E1C-DE7F-4A00-9A7E-D5895BABDC3A}
 		{2F6DE1A4-3B06-4A6D-AF6E-9CC35CA799EF} = {C8A4AD04-3EEC-47B8-8EA6-D27609DF27AD}
 		{EC1A6F39-034E-48C6-9941-90E8C4C2B581} = {B6FC1FA4-6E8D-44CC-91FF-21476559EAE0}
+		{3939EFCB-6AE7-4BA4-A468-F330C046DF4D} = {E63282AD-DEF4-4295-9A49-C306A287527C}
+		{4DEDB454-314B-4498-B485-980323D256B8} = {3939EFCB-6AE7-4BA4-A468-F330C046DF4D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {137B805C-0F00-4BC4-939E-7E8AD4FA5C32}

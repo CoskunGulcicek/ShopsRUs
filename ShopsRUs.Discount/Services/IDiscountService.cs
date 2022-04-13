@@ -9,8 +9,8 @@ namespace ShopsRUs.Discount.Services
     {
         Task<List<Models.Discount>> GetAll();
         Task<Models.Discount> GetById(int id);
-        Task<Models.Discount> Save(Models.Discount discount);
-        Task<Models.Discount> Update(Models.Discount discount);
+        Task Save(Models.Discount discount);
+        Task Update(Models.Discount discount);
         Task Delete(int id);
     }
 }

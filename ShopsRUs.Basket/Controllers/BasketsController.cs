@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ShopsRUs.Basket.Dtos;
 using ShopsRUs.Basket.Services;
+using ShopsRUs.Shared.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;

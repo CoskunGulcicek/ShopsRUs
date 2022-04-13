@@ -4,4 +4,4 @@ Discount 5014
 
 identity lokalde
 shopsrus_basketdb redis 6379
-shopsrus_discountdb postresql 27017
+shopsrus_discountdb postresql 27017 admin 123357cg.

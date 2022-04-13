@@ -10,8 +10,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Dtos\" />
     <Folder Include="Models\" />
     <Folder Include="Mapping\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ShopsRUs.Shared\ShopsRUs.Shared.csproj" />
   </ItemGroup>
 
 </Project>
