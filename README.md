@@ -1,10 +1,10 @@
-#ShopsRUsMicroservice
+#ShopsRUsMicroserviceCancel changes
 
 Program üç servisten oluşmaktadır.
 
 ShopsRUs.IdentityServer MicroService - .net Core 5.0, EntityFramework, Mssql, DIP, AutoMapper, FluentValidations, GenericRepos, FluentApi <br />
 ShopsRUs.Basket MicroService - .net Core 5.0, Redis,DIP <br />
-ShopsRUs.Discount MicroService  - .net Core 5.0, PostreSQL, Dapper.Contrib <br />
+ShopsRUs.Discount MicroService  - .net Core 5.0, PostreSQL, Dapper.Contrib ,DIP<br />
 
 ShopsRUs.IdentityServer : Kullanıcı üyelik ve diğer kullanıcı operasyonları için görevli servis <br />
 ShopsRUs.Basket :  Kullanıcı sepete ürün eklemek için istek yaptığında ürünü sepete eklemeden DiscountMicroServisine istek atar ve üyelik durumuna göre gerekli indirim ve hesaplamalar yapılarak dönüş alınır ve indirimli tutarla memorye sepeti kayıt eder<br />
