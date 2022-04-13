@@ -20,7 +20,7 @@ Port Ayarları Proje İçerisind Solution Items>Shared>portes.txt altındadır.
 Diğer Detaylar;
 Bir UI yazmayı planlamıştım identity microservisini bu yüzden kaldırmıştım ama yoğunluk sebebi ile sürece devam edemiyorum. Mevcut yapıda yapılan discountu kayıt işlemi ödeme sonrası kayıt edilebilir ama çeşitlilik ve sistemin çalışır durumunun görüntülenebilmesi için yapılan indirimler de kayıt altına alınıyor.
 
-https://localhost:5015/api/Baskets linkine aşağıdaki yapı ile post isteği atabilirsiniz. size indirim microservisi ile iletişime geçip sonucu döndürecektir.(user oluşturmanıza gerek yok random bir id ile istek atabilirsiniz.)<br />
+https://localhost:5015/api/Baskets linkine aşağıdaki yapı ile post isteği atabilirsiniz. IsEmployee,IsMember ve MemberRegistrationTime alanlarını değiştirip teste deam edebilirsiniz size indirim microservisi ile iletişime geçip sonucu döndürecektir.(user oluşturmanıza gerek yok random bir id ile istek atabilirsiniz.)<br />
 
 
 ![jsondata](https://user-images.githubusercontent.com/63802797/163184148-44c23fa2-5b9f-46c7-b62b-bd9476dff518.png)<br />
