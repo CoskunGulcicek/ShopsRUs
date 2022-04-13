@@ -20,8 +20,8 @@ Port Ayarları Proje İçerisind Solution Items>Shared>portes.txt altındadır.
 Diğer Detaylar;
 Mevcut yapıda yapılan discountu kayıt işlemi ödeme sonrası kayıt edilebilir ama çeşitlilik ve sistemin çalışır durumunun görüntülenebilmesi için yapılan indirimler de kayıt altına alınıyor.
 
-https://localhost:5015/api/Baskets linkine aşağıdaki yapı ile post isteği atabilirsiniz. size indirim microservisi ile iletişime geçip sonucu döndürecektir.(user oluşturmanıza gerek yok random bir id ile istek atabilirsiniz.)
+https://localhost:5015/api/Baskets linkine aşağıdaki yapı ile post isteği atabilirsiniz. size indirim microservisi ile iletişime geçip sonucu döndürecektir.(user oluşturmanıza gerek yok random bir id ile istek atabilirsiniz.)<br />
 
 
-![jsondata](https://user-images.githubusercontent.com/63802797/163183260-3150af5d-3b96-4593-98cb-59141df3d60b.png)
-[jsondata.txt](https://github.com/CoskunGulcicek/ShopsRUs/files/8481515/jsondata.txt)
+![jsondata](https://user-images.githubusercontent.com/63802797/163183260-3150af5d-3b96-4593-98cb-59141df3d60b.png)<br />
+[jsondata.txt](https://github.com/CoskunGulcicek/ShopsRUs/files/8481515/jsondata.txt)<br />
