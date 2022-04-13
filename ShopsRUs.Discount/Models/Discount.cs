@@ -10,7 +10,12 @@ namespace ShopsRUs.Discount.Models
     {
         public int Id { get; set; }
         public int UserId { get; set; }
-        public int Rate { get; set; }
+        public int BasketId { get; set; }
+        public int Quantity { get; set; }
+        public float Price { get; set; }
+        public float TotalPrice { get; set; }
+        public float DiscountedTotal { get; set; }
+        public float Amount { get; set; }
         public DateTime CreatedTime { get; set; }
     }
 }

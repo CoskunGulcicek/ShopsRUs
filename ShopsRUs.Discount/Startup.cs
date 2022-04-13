@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using ShopsRUs.Discount.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,8 +27,17 @@ namespace ShopsRUs.Discount
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddHttpContextAccessor();
             services.AddControllers();
+
+            services.AddScoped<IDiscountService, DiscountService>();
+
+
+            services.AddCors(options => options.AddDefaultPolicy(policy =>
+                policy.AllowAnyMethod()
+                        .AllowAnyHeader()
+                        .AllowCredentials()
+            ));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ShopsRUs.Discount", Version = "v1" });
@@ -47,6 +57,7 @@ namespace ShopsRUs.Discount
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors();
 
             app.UseAuthorization();
 

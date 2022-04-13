@@ -38,12 +38,21 @@ namespace ShopsRUs.Discount.Services
 
         public async Task Save(Models.Discount discount)
         {
-            await _dbConnection.ExecuteAsync($"UPDATE discount SET rate={discount.Rate} WHERE userid={discount.UserId}");
+            await _dbConnection.ExecuteAsync($"INSERT INTO discount(userId,basketId,quantity,price,totalPrice,discountedTotal,amount)" +
+            $"VALUES({discount.UserId},{discount.BasketId},{discount.Quantity},{discount.Price},{discount.TotalPrice},{discount.DiscountedTotal},{discount.Amount})");
+
         }
 
         public async Task Update(Models.Discount discount)
         {
-            await _dbConnection.ExecuteAsync($"INSERT INTO discount(userid,rate)VALUES({discount.UserId},{discount.Rate})");
+            await _dbConnection.ExecuteAsync($"UPDATE discount SET " +
+            $"basketId={discount.BasketId}," +
+            $"quantity={discount.Quantity}," +
+            $"price={discount.Price}," +
+            $"totalPrice={discount.TotalPrice}," +
+            $"discountedTotal={discount.DiscountedTotal}," +
+            $"amount={discount.Amount}" +
+            $" WHERE userid={discount.UserId}");
         }
     }
 }
